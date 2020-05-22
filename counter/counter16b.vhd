@@ -2,7 +2,7 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE IEEE.NUMERIC_STD.ALL;
 
-ENTITY counter4B IS
+ENTITY counter16B IS
     PORT (
         data : IN std_logic_vector (15 DOWNTO 0);
         load : IN std_logic;
@@ -12,7 +12,7 @@ ENTITY counter4B IS
     );
 END ENTITY;
 
-ARCHITECTURE main OF counter4B IS
+ARCHITECTURE main OF counter16B IS
     SIGNAL count : unsigned (15 DOWNTO 0);
 BEGIN
     PROCESS (clk, reset) BEGIN
