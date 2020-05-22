@@ -3,3 +3,6 @@ incremental_db
 output_files
 simulation
 *.bak
+*.cf
+*.ghw
+*.vcd
