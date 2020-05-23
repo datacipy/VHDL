@@ -119,14 +119,12 @@
 -- 4.3     John Kent     2010-06-17   Updated header
 -- 4.4     John Kent     2010-08-27   Combined with ACIA_RX & ACIA_TX
 --                                    Renamed to acia6850
+--         Martin Maly   2020-05-23   Remove deprecated std_logic_unsigned
 --
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
-USE ieee.std_logic_unsigned.ALL;
---library unisim;
---  use unisim.vcomponents.all;
 
 -----------------------------------------------------------------------
 -- Entity for ACIA_6850                                              --
@@ -580,7 +578,7 @@ BEGIN
                 RxClkCnt <= (OTHERS => '0');
             ELSIF RxClkEdge = '1' THEN
                 -- increment count on Clock edge
-                RxClkCnt <= RxClkCnt + "000001";
+                RxClkCnt <= std_logic_vector(unsigned(RxClkCnt) + 1);
             END IF;
         END IF;
     END PROCESS;
@@ -654,7 +652,7 @@ BEGIN
                             RxShiftReg <= RxDatDel2 & RxShiftReg(7 DOWNTO 1);
                             RxParity <= RxParity XOR RxDatDel2;
                             RxAck <= '1'; -- Flag receive in progress
-                            RxBitCount <= RxBitCount - "001";
+                            RxBitCount <= std_logic_vector(unsigned(RxBitCount) - 1);
                             IF RxBitCount = "000" THEN
                                 IF WdFmt(2) = '0' THEN -- WdFmt(2) = '0' => 7 data
                                     RxState <= RxState_Parity; -- 7 bits always has parity
@@ -755,7 +753,7 @@ BEGIN
             IF tx_rst = '1' THEN
                 TxClkCnt <= (OTHERS => '0');
             ELSIF TxClkEdge = '1' THEN
-                TxClkCnt <= TxClkCnt + "000001";
+                TxClkCnt <= std_logic_vector(unsigned(TxClkCnt) + 1);
             END IF;
         END IF;
     END PROCESS;
@@ -835,7 +833,7 @@ BEGIN
                             TxDat <= TxShiftReg(0);
                             TxShiftReg <= '1' & TxShiftReg(7 DOWNTO 1);
                             TxParity <= TxParity XOR TxShiftReg(0);
-                            TxBitCount <= TxBitCount - "001";
+                            TxBitCount <= std_logic_vector(unsigned(TxBitCount) - 1);
                             IF TxBitCount = "000" THEN
                                 IF (WdFmt(2) = '1') AND (WdFmt(1) = '0') THEN
                                     IF WdFmt(0) = '0' THEN -- 8 data bits

@@ -47,19 +47,16 @@
 -- Revision Name          Date             Description
 -- 0.1      John Kent     unknown          Initial version
 -- 1.0      John Kent     30th May 2010    Added GPL header 
+--          Martin Maly   2020-05-23       Removed deprecated libraries
 --      
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
-USE ieee.std_logic_arith.ALL;
-USE ieee.std_logic_unsigned.ALL;
 USE ieee.numeric_std.ALL;
 --library unisim;
 --	use unisim.vcomponents.all;
-LIBRARY work;
-USE work.bit_funcs.ALL;
 
-ENTITY acia_clock IS
+ENTITY aciaClock IS
     GENERIC (
         SYS_CLK_FREQ : INTEGER;
         ACIA_CLK_FREQ : INTEGER
@@ -68,12 +65,24 @@ ENTITY acia_clock IS
         clk : IN Std_Logic; -- System Clock input
         acia_clk : OUT Std_Logic -- ACIA Clock output
     );
-END acia_clock;
+END ENTITY;
 
 -------------------------------------------------------------------------------
 -- Architecture for ACIA_Clock
 -------------------------------------------------------------------------------
-ARCHITECTURE rtl OF ACIA_Clock IS
+ARCHITECTURE rtl OF ACIAClock IS
+
+    FUNCTION log2 (v : IN NATURAL) RETURN NATURAL IS
+        VARIABLE temp, log : NATURAL;
+    BEGIN
+        temp := v / 2;
+        log := 0;
+        WHILE (temp /= 0) LOOP
+            temp := temp/2;
+            log := log + 1;
+        END LOOP;
+        RETURN log;
+    END FUNCTION log2;
 
     CONSTANT FULL_CYCLE : INTEGER := (SYS_CLK_FREQ / ACIA_CLK_FREQ);
     CONSTANT HALF_CYCLE : INTEGER := (FULL_CYCLE / 2);
@@ -89,16 +98,16 @@ BEGIN
     my_acia_clock : PROCESS (clk)
     BEGIN
         IF (clk'event AND clk = '0') THEN
-            IF (acia_count = (FULL_CYCLE - 1)) THEN
+            IF (to_integer(unsigned(acia_count)) = (FULL_CYCLE - 1)) THEN
                 acia_clk <= '0';
                 acia_count <= (OTHERS => '0'); --"000000";
             ELSE
-                IF (acia_count = (HALF_CYCLE - 1)) THEN
+                IF (to_integer(unsigned(acia_count)) = (HALF_CYCLE - 1)) THEN
                     acia_clk <= '1';
                 END IF;
-                acia_count <= acia_count + 1;
+                acia_count <= std_logic_vector(unsigned(acia_count) + 1);
             END IF;
         END IF;
     END PROCESS;
 
-END rtl;
+END ARCHITECTURE;
