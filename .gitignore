@@ -10,3 +10,5 @@ greybox_tmp
 *.rpt
 *.qsf
 *.qws
+*.bdf
+*.qpf
