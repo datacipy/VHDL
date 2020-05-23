@@ -1,0 +1,3 @@
+[submodule "3rd/light8080"]
+	path = 3rd/light8080
+	url = https://github.com/jaruiz/light8080
