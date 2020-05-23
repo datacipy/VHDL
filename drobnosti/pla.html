@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<script>
+  PLA = [
+    ["100XX1XX", "3", "X", "STY"],
+    ["XXX100XX", "1", "3", "T3INDYA"],
+    ["XXX110XX", "1", "2", "T2ABSY"],
+    ["1100XXXX", "3", "0", "T0CPYINY"],
+    ["100110XX", "3", "0", "T0TYAA"],
+    ["1X0010XX", "3", "0", "T0DEYINY"],
+    ["000000XX", "3", "5", "T5INT"],
+    ["10XXXXXX", "2", "X", "LDXSDX"],
+    ["XXX1X1XX", "X", "2", "T2ANYX"],
+    ["XXX000XX", "1", "2", "T2XIND"],
+    ["100010XX", "2", "0", "T0TXAA"],
+    ["110010XX", "2", "0", "T0DEX"],
+    ["1110XXXX", "3", "0", "T0CPXINX"],
+    ["100110XX", "2", "0", "T0TXS"],
+    ["100XXXXX", "2", "X", "SDX"],
+    ["101XXXXX", "2", "0", "T0TALDTSX"],
+    ["110010XX", "2", "1", "T1DEX"],
+    ["111010XX", "3", "1", "T1INX"],
+    ["101110XX", "2", "0", "T0TSX"],
+    ["1X0010XX", "3", "1", "T1DEYINY"],
+    ["101XX1XX", "3", "0", "T0LDY1"],
+    ["1010XXXX", "3", "0", "T0LDY2TAY"],
+    ["0XX0X0XX", "3", "2", "CCC"],
+    ["001000XX", "3", "0", "T0JSR"],
+    ["0X0010XX", "3", "0", "T0PSHASHP"],
+    ["011000XX", "3", "4", "T4RTS"],
+    ["0X1010XX", "3", "3", "T3PLAPLPA"],
+    ["010000XX", "3", "5", "T5RTI"],
+    ["011XXXXX", "2", "X", "RORRORA"],
+    ["001000XX", "3", "2", "T2JSR"],
+    ["01X011XX", "3", "X", "JMPA"],
+    ["XXXXXXXX", "X", "2", "T2"],
+    ["XXX011XX", "X", "2", "T2EXT"],
+    ["01X000XX", "3", "X", "RTIRTS"],
+    ["XXX000XX", "1", "4", "T4XIND"],
+    ["XXXXXXXX", "X", "0", "T0A"],
+    ["XXXX0XXX", "X", "2", "T2NANYABS"],
+    ["010000XX", "3", "4", "T4RTIA"],
+    ["00X000XX", "3", "4", "T4JSRINT"],
+    ["0XX0XXXX", "3", "3", "NAME1:T3_RTI_RTS_JSR_JMP_INT_PULA_PUPL"],
+    ["XXX100XX", "1", "3", "T3INDYB"],
+    ["XXX000XX", "1", "3", "T3XIND"],
+    ["XXX100XX", "1", "4", "T4INDYA"],
+    ["XXX100XX", "1", "2", "T2INDY"],
+    ["XXX11XXX", "X", "3", "T3ABSXYA"],
+    ["0X1010XX", "3", "X", "PULAPULP"],
+    ["111XXXXX", "2", "X", "INC"],
+    ["010XXXXX", "1", "0", "T0EOR"],
+    ["110XXXXX", "1", "0", "T0CMP"],
+    ["11X0XXXX", "3", "0", "NAME2:T0_CPX_CPY_INX_INY"],
+    ["X11XXXXX", "1", "0", "T0ADCSBC"],
+    ["111XXXXX", "1", "0", "T0SBC"],
+    ["001XXXXX", "2", "X", "ROLROLA"],
+    ["01X011XX", "3", "3", "T3JMP"],
+    ["000XXXXX", "1", "0", "T0ORA"],
+    ["00XXXXXX", "2", "X", "NAME8:ROL_ROLA_ASL_ASLA"],
+    ["100110XX", "3", "0", "T0TYAB"],
+    ["100010XX", "2", "0", "T0TXAB"],
+    ["X11XXXXX", "1", "1", "T1ADCSBCA"],
+    ["0XXXXXXX", "1", "1", "NAME7:T1_AND_EOR_OR_ADC"],
+    ["0XX010XX", "2", "1", "NAME4:T1_ASLA_ROLA_LSRA"],
+    ["011010XX", "3", "0", "T0PULA"],
+    ["XXX11XXX", "X", "4", "T4ABSXYA"],
+    ["XXX100XX", "1", "5", "T5INDY"],
+    ["101XXXXX", "1", "0", "T0LDA"],
+    ["XXXXXXXX", "1", "0", "T0G1"],
+    ["001XXXXX", "1", "0", "T0AND"],
+    ["0010X1XX", "3", "0", "T0BITA"],
+    ["0XX010XX", "2", "0", "NAME6:T0_ASLA_ROLA_LSRA"],
+    ["101010XX", "2", "0", "T0TAX"],
+    ["101010XX", "3", "0", "T0TAY"],
+    ["01X010XX", "2", "0", "T0LSRA"],
+    ["01XXXXXX", "2", "X", "LSRLSRA"],
+    ["001000XX", "3", "5", "T5JSRA"],
+    ["XXX100XX", "3", "2", "T2BR"],
+    ["000000XX", "3", "2", "T2INT"],
+    ["001000XX", "3", "3", "T3JSR"],
+    ["XXXX01XX", "X", "2", "T2ANYZP"],
+    ["XXXX00XX", "1", "2", "T2ANYIND"],
+    ["XXXXXXXX", "X", "4", "T4"],
+    ["XXXXXXXX", "X", "3", "T3"],
+    ["0X0000XX", "3", "0", "T0RTIINT"],
+    ["01X011XX", "3", "0", "T0JMP"],
+    ["0XX0X0XX", "3", "2", "NAME3:T2_RTI_RTS_JSR_INT_PULA_PUPLP_PSHA_PSHP"],
+    ["011000XX", "3", "5", "T5RTS"],
+    ["XXXX1XXX", "X", "2", "T2ANYABS"],
+    ["100XXXXX", "1", "X", "STA"],
+    ["010010XX", "3", "2", "T2PSHA"],
+    ["XXX100XX", "3", "0", "T0BR"],
+    ["0XX010XX", "3", "X", "PSHPULA"],
+    ["XXX000XX", "1", "5", "T5XIND"],
+    ["XXXX1XXX", "X", "3", "T3ANYABS"],
+    ["XXX100XX", "1", "4", "T4INDYB"],
+    ["XXX11XXX", "X", "3", "T3ABSXYB"],
+    ["0X0000XX", "3", "X", "RTIINT"],
+    ["001000XX", "3", "X", "JSR"],
+    ["01X011XX", "3", "X", "JMPB"],
+    ["11X00XXX", "3", "1", "T1CPX2CY2"],
+    ["00X010XX", "2", "1", "T1ASLARLA"],
+    ["11X011XX", "3", "1", "T1CPX1CY1"],
+    ["110XXXXX", "1", "1", "T1CMP"],
+    ["X11XXXXX", "1", "1", "T1ADCSBCB"],
+    ["00XXXXXX", "2", "X", "NAME5:ROL_ROLA_ASL_ASLA"],
+    ["X1XXXXXX", "2", "X", "LSRRADCIC"],
+    ["0010X1XX", "3", "1", "T1BIT"],
+    ["000010XX", "3", "2", "T2PSHP"],
+    ["000000XX", "3", "4", "T4INT"],
+    ["100XXXXX", "X", "X", "STASTYSTX"],
+    ["XXX11XXX", "X", "4", "T4ABSXYB"],
+    ["XXXX00XX", "1", "5", "T5ANYIND"],
+    ["XXX001XX", "X", "2", "T2ZP"],
+    ["XXX011XX", "X", "3", "T3ABS"],
+    ["XXX101XX", "X", "3", "T3ZPX"],
+    ["0X0010XX", "3", "2", "T2PSHASHP"],
+    ["01X000XX", "3", "5", "T5RTIRTS"],
+    ["001000XX", "3", "5", "T5JSRB"],
+    ["01X011XX", "3", "5", "T4JMP"],
+    ["010011XX", "3", "2", "T2JMPABS"],
+    ["0X1010XX", "3", "3", "T3PLAPLPB"],
+    ["XXX100XX", "3", "3", "T3BR"],
+    ["0010X1XX", "3", "0", "T0BITB"],
+    ["010000XX", "3", "4", "T4RTIB"],
+    ["001010XX", "3", "0", "T0PULP"],
+    ["0XX010XX", "3", "X", "PSHPULB"],
+    ["101110XX", "3", "X", "CLV"],
+    ["00X110XX", "3", "0", "T0CLCSEC"],
+    ["01X110XX", "3", "0", "T0CLISEI"],
+    ["11X110XX", "3", "0", "T0CLDSED"],
+    ["0XXXXXXX", "X", "X", "NI7P"],
+    ["X0XXXXXX", "X", "X", "NI6P"],
+  ];
+
+  var matchLine = function (opcodeS, cycle, line) {
+    if (cycle != line[2] && line[2] != "X") return false;
+
+    //console.log(opcodeS, line);
+
+    var b0 = opcodeS[7];
+    var b1 = opcodeS[6];
+
+    var g = line[1];
+    //console.log(g, b0, b1);
+    if (g != "X") {
+      if (g == "1" && b0 != "1") return false;
+      if (g == "2" && b1 != "1") return false;
+      if (g == "3" && (b0 == "1" || b1 == "1")) return false;
+    }
+
+    //true
+    var mask = line[0];
+    for (var i = 0; i < 6; i++) {
+      //console.log(mask.substr(i, 1), opcodeS[i]);
+      if (mask.substr(i, 1) === "X") continue;
+      if (mask.substr(i, 1) !== opcodeS[i]) return false;
+    }
+    return true;
+  };
+
+  var plaMatch = function (opcode, cycle) {
+    var opcodeS = opcode.toString(2);
+    while (opcodeS.length < 8) {
+      opcodeS = "0" + opcodeS;
+    }
+    for (var i = 0; i < PLA.length; i++) {
+      var ml = matchLine(opcodeS, cycle, PLA[i]);
+      if (!ml) continue;
+      console.log(PLA[i][3]);
+    }
+  };
+  var decode = function (opcode) {
+    for (i = 0; i < 6; i++) {
+      console.log("0x" + opcode.toString(16), "Cycle " + i);
+      plaMatch(opcode, i);
+    }
+  };
+</script>
