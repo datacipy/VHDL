@@ -1,0 +1,16 @@
+../../../../t80/rtl/vhdl/T80_Pack.vhd
+../../../../t80/rtl/vhdl/T80_MCode.vhd
+../../../../t80/rtl/vhdl/T80_ALU.vhd
+../../../../t80/rtl/vhdl/T80_RegX.vhd
+../../../../t80/rtl/vhdl/T80.vhd
+../../../../t80/rtl/vhdl/T80s.vhd
+../../../ext/ps2me.vhd
+../src/ROM81.vhd
+../../../zx97/busses.vhd
+../../../zx97/io81.vhd
+../../../zx97/lcd97.vhd
+../../../zx97/modes97.vhd
+../../../zx97/res_clk.vhd
+../../../zx97/video81.vhd
+../../../zx97/top.vhd
+../../../zx01/zx01xr.vhd

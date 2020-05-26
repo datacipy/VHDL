@@ -1,0 +1,7 @@
+run
+-ifn ../bin/ace.prj
+-ifmt VHDL
+-ofn ../out/ace.ngc
+-ofmt NGC -p xc2s300e-pq208-6
+-opt_mode Area
+-opt_level 2

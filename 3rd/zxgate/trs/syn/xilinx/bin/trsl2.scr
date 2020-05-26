@@ -1,0 +1,7 @@
+run
+-ifn ../bin/trsl2.prj
+-ifmt VHDL
+-ofn ../out/trsl2.ngc
+-ofmt NGC -p xc2s300e-pq208-6
+-opt_mode Area
+-opt_level 2

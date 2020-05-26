@@ -1,0 +1,9 @@
+#NET "clk" TNM_NET = "clk";
+#TIMESPEC "TS_clk" = PERIOD "clk" 20 ns HIGH 50%;
+
+NET "rst_n" LOC = "P152";
+NET "clk" LOC = "P77";
+NET "eur" LOC = "P135";
+NET "ps2_clk" LOC = "P136";
+NET "ps2_data" LOC = "P139";
+NET "cvbs" LOC = "P141";

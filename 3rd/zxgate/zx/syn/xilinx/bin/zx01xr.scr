@@ -1,0 +1,7 @@
+run
+-ifn ../bin/zx01xr.prj
+-ifmt VHDL
+-ofn ../out/zx01xr.ngc
+-ofmt NGC -p xc2s200-pq208-5
+-opt_mode Area
+-opt_level 2

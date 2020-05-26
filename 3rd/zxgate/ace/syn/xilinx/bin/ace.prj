@@ -1,0 +1,13 @@
+../../../../t80/rtl/vhdl/T80_Pack.vhd
+../../../../t80/rtl/vhdl/T80_MCode.vhd
+../../../../t80/rtl/vhdl/T80_ALU.vhd
+../../../../t80/rtl/vhdl/T80_RegX.vhd
+../../../../t80/rtl/vhdl/T80.vhd
+../../../../t80/rtl/vhdl/T80_STop.vhd
+../../../../t80/rtl/vhdl/T80se.vhd
+../../../../t80/rtl/vhdl/SSRAMX.vhd
+../../../rtl/ace_ps2.vhd
+../../../rtl/ace_vid.vhd
+../../../rtl/ace_glue.vhd
+../src/acerom.vhd
+../../../rtl/ace.vhd

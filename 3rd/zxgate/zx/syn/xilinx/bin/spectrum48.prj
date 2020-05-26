@@ -1,0 +1,15 @@
+../../../../t80/rtl/vhdl/T80_Pack.vhd
+../../../../t80/rtl/vhdl/T80_MCode.vhd
+../../../../t80/rtl/vhdl/T80_ALU.vhd
+../../../../t80/rtl/vhdl/T80_RegX.vhd
+../../../../t80/rtl/vhdl/T80.vhd
+../../../../t80/rtl/vhdl/T80se.vhd
+../../../../t80/rtl/vhdl/SSRAMX.vhd
+../../../spectrum/spectrum_ps2.vhd
+../../../spectrum/spectrum_vid.vhd
+../../../spectrum/spectrum48_glue.vhd
+../../../spectrum/ddsrom.vhd
+../../../spectrum/dds.vhd
+../../../spectrum/qam.vhd
+../../../spectrum/cvm.vhd
+../../../spectrum/spectrum48.vhd

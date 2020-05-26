@@ -1,0 +1,8 @@
+vcom ../../../zx97/busses.vhd
+vcom ../../../zx97/io81.vhd
+vcom ../../../zx97/lcd97.vhd
+vcom ../../../zx97/modes97.vhd
+vcom ../../../zx97/res_clk.vhd
+vcom ../../../zx97/video81.vhd
+vcom ../../../zx97/top.vhd
+vcom ../../../zx97/zx97.vhd

@@ -1,0 +1,19 @@
+#NET "clock" TNM_NET = "clock";
+#TIMESPEC "TS_clock" = PERIOD "clock" 20 ns HIGH 50%;
+
+NET "clock" LOC = "P77";
+NET "n_reset" LOC = "P152";
+NET "cp1" LOC = "P113";
+NET "cp2" LOC = "P114";
+NET "d_lcd(0)" LOC = "P108";
+NET "d_lcd(1)" LOC = "P109";
+NET "d_lcd(2)" LOC = "P110";
+NET "d_lcd(3)" LOC = "P111";
+NET "kbd_clk" LOC = "P136";
+NET "kbd_data" LOC = "P139";
+NET "s" LOC = "P112";
+NET "tape_in" LOC = "P146";
+NET "tape_out" LOC = "P148";
+NET "usa_uk" LOC = "P135";
+NET "video" LOC = "P141";
+NET "v_inv" LOC = "P134";

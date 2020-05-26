@@ -1,0 +1,9 @@
+#NET "clock" TNM_NET = "clock";
+#TIMESPEC "TS_clock" = PERIOD "clock" 20 ns HIGH 50%;
+
+NET "Rst_n" LOC = "P152";
+NET "Clk" LOC = "P77";
+NET "Eur" LOC = "P135";
+NET "PS2_Clk" LOC = "P136";
+NET "PS2_Data" LOC = "P139";
+NET "CVBS" LOC = "P141";
