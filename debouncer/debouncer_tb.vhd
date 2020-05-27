@@ -34,34 +34,48 @@ BEGIN
     tReset <= '0';
     WAIT FOR 1 ns;
 
-    tD<='1'; wait for 10 ps;
-    tD<='0'; wait for 10 ps;
-    tD<='1'; wait for 10 ps;
-    tD<='0'; wait for 10 ps;
-    tD<='1'; 
-    wait for 10 ns;
+    tD <= '1';
+    WAIT FOR 10 ps;
+    tD <= '0';
+    WAIT FOR 10 ps;
+    tD <= '1';
+    WAIT FOR 10 ps;
+    tD <= '0';
+    WAIT FOR 10 ps;
+    tD <= '1';
+    WAIT FOR 10 ns;
 
-    tD<='0'; wait for 10 ps;
-    tD<='1'; wait for 10 ps;
-    tD<='0'; wait for 10 ps;
-    tD<='1'; wait for 10 ps;
-    tD<='0'; 
-    wait for 10 ns;
+    tD <= '0';
+    WAIT FOR 10 ps;
+    tD <= '1';
+    WAIT FOR 10 ps;
+    tD <= '0';
+    WAIT FOR 10 ps;
+    tD <= '1';
+    WAIT FOR 10 ps;
+    tD <= '0';
+    WAIT FOR 10 ns;
+    tD <= '1';
+    WAIT FOR 10 ps;
+    tD <= '0';
+    WAIT FOR 10 ps;
+    tD <= '1';
+    WAIT FOR 10 ps;
+    tD <= '0';
+    WAIT FOR 10 ps;
+    tD <= '1';
+    WAIT FOR 14 ns;
 
-
-    tD<='1'; wait for 10 ps;
-    tD<='0'; wait for 10 ps;
-    tD<='1'; wait for 10 ps;
-    tD<='0'; wait for 10 ps;
-    tD<='1'; 
-    wait for 14 ns;
-
-    tD<='0'; wait for 10 ps;
-    tD<='1'; wait for 10 ps;
-    tD<='0'; wait for 10 ps;
-    tD<='1'; wait for 10 ps;
-    tD<='0'; 
-    wait for 5 ns;
+    tD <= '0';
+    WAIT FOR 10 ps;
+    tD <= '1';
+    WAIT FOR 10 ps;
+    tD <= '0';
+    WAIT FOR 10 ps;
+    tD <= '1';
+    WAIT FOR 10 ps;
+    tD <= '0';
+    WAIT FOR 5 ns;
 
     -- end
     clockEnable <= '0';
