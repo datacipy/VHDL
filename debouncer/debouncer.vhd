@@ -1,7 +1,7 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 
-ENTITY debounce IS
+ENTITY debouncer IS
   GENERIC(
     stableTime : INTEGER := 10);  -- pocet cyklu
   PORT(
@@ -9,9 +9,9 @@ ENTITY debounce IS
     reset : IN  STD_LOGIC;  --asynchronous active low reset
     d  : IN  STD_LOGIC;  --input signal to be debounced
     q  : OUT STD_LOGIC); --debounced signal
-END debounce;
+END ENTitY;
 
-ARCHITECTURE main OF debounce IS
+ARCHITECTURE main OF debouncer IS
   SIGNAL delays   : STD_LOGIC_VECTOR(1 DOWNTO 0); --input flip flops
   SIGNAL edge : STD_LOGIC;                    --sync reset to zero
 BEGIN
