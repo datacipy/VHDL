@@ -2,6 +2,7 @@ LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
 USE IEEE.NUMERIC_STD.ALL;
 USE work.bookUtility.ALL; -- for toString
+USE std.textio.ALL;
 
 ENTITY counter4B_tb IS
 END;
@@ -20,17 +21,23 @@ BEGIN
     WHILE clockEnable = '1' LOOP
       WAIT FOR 5 ns;
       tClk <= NOT tClk;
-      REPORT "Clock tick [" & std_logic'image(tClk) & "]";
+      -- REPORT "Clock tick [" & std_logic'image(tClk) & "]";
     END LOOP;
     WAIT;
   END PROCESS;
 
   testing : PROCESS
 
+    FILE log : text OPEN write_mode IS "counter4b.txt";
+    VARIABLE row : line;
+
     PROCEDURE vypis IS
     BEGIN
       REPORT toString(tD) &
         " => " & toString(tQ);
+      write(row, tD, left, 5);
+      write(row, tQ, left, 5);
+      writeline(log, row);
     END PROCEDURE;
 
   BEGIN
