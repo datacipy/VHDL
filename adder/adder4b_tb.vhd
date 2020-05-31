@@ -1,7 +1,7 @@
 LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
 USE IEEE.NUMERIC_STD.ALL;
-USE work.bookUtility.ALL; -- for toString
+USE std.textio.ALL;
 
 ENTITY adder4b_tb IS
 END;
@@ -21,58 +21,45 @@ ARCHITECTURE bench OF adder4b_tb IS
 BEGIN
   testing : PROCESS
 
-    PROCEDURE vypis IS
-    BEGIN
-      REPORT toString(tA) & " + " & toString(tB) & " + " & std_logic'image(tC) &
-        " = " & std_logic'image(tCout) & toString(tQ);
-    END PROCEDURE;
+    --type t_inp is 
 
+    FILE test_stimul : text OPEN read_mode IS "adder4b_stim.txt";
+    VARIABLE row : line;
+    VARIABLE inp1, inp2 : std_logic_vector (3 DOWNTO 0);
+    VARIABLE result : std_logic_vector (4 DOWNTO 0);
+    VARIABLE carryIn : std_logic;
+
+    FILE test_log : text OPEN write_mode IS "adder4b_log.txt";
+    VARIABLE orow : line;
   BEGIN
-    tC <= '0';
-    tA <= "0000";
-    tB <= "0000";
-    WAIT FOR 10 ns;
-    vypis;
-    ASSERT tCout = '0' AND tQ = "0000" REPORT "0+0+0 failed" SEVERITY failure;
-    tA <= "0001";
-    tB <= "0000";
-    WAIT FOR 10 ns;
-    vypis;
-    ASSERT tCout = '0' AND tQ = "0001" REPORT "1+0+0 failed" SEVERITY failure;
-    tA <= "1111";
-    tB <= "0000";
-    WAIT FOR 10 ns;
-    vypis;
-    ASSERT tCout = '0' AND tQ = "1111" REPORT "15+0+0 failed" SEVERITY failure;
-    tA <= "1111";
-    tB <= "0001";
-    WAIT FOR 10 ns;
-    vypis;
-    ASSERT tCout = '1' AND tQ = "0000" REPORT "15+1+0 failed" SEVERITY failure;
 
-    tC <= '1';
-    tA <= "0000";
-    tB <= "0000";
+    IF (NOT endfile(test_stimul)) THEN
+      readline(test_stimul, row);
+    ELSE
+      WAIT;
+    END IF;
+    read(row, inp1);
+    read(row, inp2);
+    read(row, carryIn);
+    read(row, result);
+
+    write(orow, inp1, left, 5);
+    write(orow, inp2, left, 5);
+    write(orow, carryIn, left, 2);
+    write(orow, result, left, 6);
+    tA <= inp1;
+    tB <= inp2;
+    tC <= carryIn;
     WAIT FOR 10 ns;
-    vypis;
-    ASSERT tCout = '0' AND tQ = "0001" REPORT "0+0+1 failed" SEVERITY failure;
-    tA <= "0001";
-    tB <= "0000";
-    WAIT FOR 10 ns;
-    vypis;
-    ASSERT tCout = '0' AND tQ = "0010" REPORT "1+0+1 failed" SEVERITY failure;
-    tA <= "1111";
-    tB <= "0000";
-    WAIT FOR 10 ns;
-    vypis;
-    ASSERT tCout = '1' AND tQ = "0000" REPORT "15+0+1 failed" SEVERITY failure;
-    tA <= "1111";
-    tB <= "0001";
-    WAIT FOR 10 ns;
-    vypis;
-    ASSERT tCout = '1' AND tQ = "0001" REPORT "15+1+1 failed" SEVERITY failure;
-    REPORT "Test OK";
-    WAIT;
+    --ASSERT (tCout & tQ) = result REPORT "failed" SEVERITY failure;
+    write(orow, (tCout & tQ), left, 6);
+    IF (tCout & tQ) = result THEN
+      swrite(orow, "OK", left, 2);
+    ELSE
+      swrite(orow, "FAIL", left, 4);
+    END IF;
+    writeline(test_log, orow);
+    --vypis;
   END PROCESS;
 
   UUT : adder4B PORT MAP(tA, tB, tC, tQ, tCout);
