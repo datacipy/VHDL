@@ -206,8 +206,8 @@ BEGIN
 
     mhz133 <= clk;
     ramDataOut <= dramDataOut(7 DOWNTO 0); --15 to 1
-    --todo zpozdeni
-    reset <= dramReset; --zbytek systemu
+
+    wdog : ENTITY work.propreset PORT MAP (cpuclock, reset_b, dramreset, reset);
 
     -- SDRAM wait states
     PROCESS (cpuClock)
@@ -283,23 +283,6 @@ BEGIN
         uartDataOut WHEN (uartcs AND iord)
         ELSE
         x"00";
-
-    PROCESS (cpuClock)
-        VARIABLE resetDuration : INTEGER := 5;
-    BEGIN
-        IF rising_edge(cpuClock) THEN
-            IF resetDuration = 0 THEN
-                dramReset <= '0';
-            ELSE
-                resetDuration := resetDuration - 1;
-                dramReset <= '1';
-            END IF;
-            IF reset_b = '0' THEN
-                resetDuration := 7;
-            END IF;
-        END IF;
-    END PROCESS;
-
     --testing
     --leds
     led1 <= NOT reset;
