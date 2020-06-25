@@ -1,0 +1,108 @@
+# Copyright (C) 2019  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+
+# Quartus Prime Version 19.1.0 Build 670 09/22/2019 Patches 0.02std SJ Lite Edition
+# File: D:\VHDL\kniha\omdazz\pinplanner.csv
+# Generated on: Wed Jun 24 10:16:47 2020
+
+# Note: The column header names should not be changed if you wish to import this .csv file into the Quartus Prime software.
+
+To,Direction,Location,I/O Bank,VREF Group,I/O Standard,Reserved,Current Strength,Slew Rate,Differential Pair,Strict Preservation
+beep,Output,PIN_110,7,B7_N0,,,,,,
+ckey1,Input,PIN_88,5,B5_N0,,,,,,
+ckey2,Input,PIN_89,5,B5_N0,,,,,,
+ckey3,Input,PIN_90,6,B6_N0,,,,,,
+ckey4,Input,PIN_91,6,B6_N0,,,,,,
+clk,Input,PIN_23,1,B1_N0,,,,,,
+dig1,Output,PIN_133,8,B8_N0,,,,,,
+dig2,Output,PIN_135,8,B8_N0,,,,,,
+dig3,Output,PIN_136,8,B8_N0,,,,,,
+dig4,Output,PIN_137,8,B8_N0,,,,,,
+i2c_scl,Output,PIN_99,6,B6_N0,,,,,,
+i2c_sda,Bidir,PIN_98,6,B6_N0,,,,,,
+ir,Input,PIN_100,6,B6_N0,,,,,,
+lcd_d[7],Output,PIN_11,1,B1_N0,,,,,,
+lcd_d[6],Output,PIN_7,1,B1_N0,,,,,,
+lcd_d[5],Output,PIN_10,1,B1_N0,,,,,,
+lcd_d[4],Output,PIN_2,1,B1_N0,,,,,,
+lcd_d[3],Output,PIN_3,1,B1_N0,,,,,,
+lcd_d[2],Output,PIN_144,8,B8_N0,,,,,,
+lcd_d[1],Output,PIN_1,1,B1_N0,,,,,,
+lcd_d[0],Output,PIN_142,8,B8_N0,,,,,,
+lcd_e,Output,PIN_143,8,B8_N0,,,,,,
+lcd_rs,Output,PIN_141,8,B8_N0,,,,,,
+lcd_rw,Output,PIN_138,8,B8_N0,,,,,,
+led1,Output,PIN_87,5,B5_N0,,,,,,
+led2,Output,PIN_86,5,B5_N0,,,,,,
+led3,Output,PIN_85,5,B5_N0,,,,,,
+led4,Output,PIN_84,5,B5_N0,,,,,,
+ps2_clock,Bidir,PIN_119,7,B7_N0,,,,,,
+ps2_data,Bidir,PIN_120,7,B7_N0,,,,,,
+reset_b,Input,PIN_25,2,B2_N0,,,,,,
+s_a[11],Output,PIN_59,4,B4_N0,,,,,,
+s_a[10],Output,PIN_75,5,B5_N0,,,,,,
+s_a[9],Output,PIN_60,4,B4_N0,,,,,,
+s_a[8],Output,PIN_64,4,B4_N0,,,,,,
+s_a[7],Output,PIN_65,4,B4_N0,,,,,,
+s_a[6],Output,PIN_66,4,B4_N0,,,,,,
+s_a[5],Output,PIN_67,4,B4_N0,,,,,,
+s_a[4],Output,PIN_68,4,B4_N0,,,,,,
+s_a[3],Output,PIN_83,5,B5_N0,,,,,,
+s_a[2],Output,PIN_80,5,B5_N0,,,,,,
+s_a[1],Output,PIN_77,5,B5_N0,,,,,,
+s_a[0],Output,PIN_76,5,B5_N0,,,,,,
+s_bs[1],Output,PIN_74,5,B5_N0,,,,,,
+s_bs[0],Output,PIN_73,5,B5_N0,,,,,,
+s_cas,Output,PIN_70,4,B4_N0,,,,,,
+s_cke,Output,PIN_58,4,B4_N0,,,,,,
+s_clk,Output,PIN_43,3,B3_N0,,,,,,
+s_cs,Output,PIN_72,4,B4_N0,,,,,,
+s_dq[15],Bidir,PIN_44,3,B3_N0,,,,,,
+s_dq[14],Bidir,PIN_46,3,B3_N0,,,,,,
+s_dq[13],Bidir,PIN_49,3,B3_N0,,,,,,
+s_dq[12],Bidir,PIN_50,3,B3_N0,,,,,,
+s_dq[11],Bidir,PIN_51,3,B3_N0,,,,,,
+s_dq[10],Bidir,PIN_52,3,B3_N0,,,,,,
+s_dq[9],Bidir,PIN_53,3,B3_N0,,,,,,
+s_dq[8],Bidir,PIN_54,4,B4_N0,,,,,,
+s_dq[7],Bidir,PIN_39,3,B3_N0,,,,,,
+s_dq[6],Bidir,PIN_38,3,B3_N0,,,,,,
+s_dq[5],Bidir,PIN_34,2,B2_N0,,,,,,
+s_dq[4],Bidir,PIN_33,2,B2_N0,,,,,,
+s_dq[3],Bidir,PIN_32,2,B2_N0,,,,,,
+s_dq[2],Bidir,PIN_31,2,B2_N0,,,,,,
+s_dq[1],Bidir,PIN_30,2,B2_N0,,,,,,
+s_dq[0],Bidir,PIN_28,2,B2_N0,,,,,,
+s_ldqm,Output,PIN_42,3,B3_N0,,,,,,
+s_ras,Output,PIN_71,4,B4_N0,,,,,,
+s_udqm,Output,PIN_55,4,B4_N0,,,,,,
+s_we,Output,PIN_69,4,B4_N0,,,,,,
+segA,Output,PIN_128,8,B8_N0,,,,,,
+segB,Output,PIN_121,7,B7_N0,,,,,,
+segC,Output,PIN_125,7,B7_N0,,,,,,
+segD,Output,PIN_129,8,B8_N0,,,,,,
+segE,Output,PIN_132,8,B8_N0,,,,,,
+segF,Output,PIN_126,7,B7_N0,,,,,,
+segG,Output,PIN_124,7,B7_N0,,,,,,
+segH,Output,PIN_127,7,B7_N0,,,,,,
+temp_scl,Output,PIN_112,7,B7_N0,,,,,,
+temp_sda,Bidir,PIN_113,7,B7_N0,,,,,,
+uart_rxd,Input,PIN_115,7,B7_N0,,,,,,
+uart_txd,Output,PIN_114,7,B7_N0,,,,,,
+vga_b,Output,PIN_104,6,B6_N0,,,,,,
+vga_g,Output,PIN_105,6,B6_N0,,,,,,
+vga_hs,Output,PIN_101,6,B6_N0,,,,,,
+vga_r,Output,PIN_106,6,B6_N0,,,,,,
+vga_vs,Output,PIN_103,6,B6_N0,,,,,,
