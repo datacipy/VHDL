@@ -4,6 +4,9 @@ LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
 USE IEEE.NUMERIC_STD.ALL;
 
+-- baltera message_level Level1 
+-- baltera message_off 10034 10035 10036 10037 10230 10240 10030 
+
 ENTITY omdazzalpha IS
     PORT (
         clk : IN std_logic; --23
