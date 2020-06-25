@@ -1,4 +1,4 @@
--- OMEN ALPHA
+-- OMEN ALPHA / SDRAM / Terminal / T80
 
 LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
@@ -117,29 +117,29 @@ ARCHITECTURE main OF omdazzalpha IS
 
     SIGNAL cpuClkCount : unsigned(5 DOWNTO 0);
 
-    SIGNAL trig : STD_LOGIC_VECTOR (0 DOWNTO 0);
+    SIGNAL mhz133 : std_logic;
+    SIGNAL khz : std_logic;
+    SIGNAL rfsh_n : std_logic;
+    SIGNAL doWait : std_logic := '0';
+    SIGNAL dramReset : std_logic := '1';
+    SIGNAL dramReady : std_logic;
+    SIGNAL dramDone : std_logic;
+    SIGNAL dramDataOut : std_logic_vector(15 DOWNTO 0);
+    SIGNAL dramWait : std_logic := '0';
+
+    --test
+    SIGNAL dispLatch : std_logic_vector(15 DOWNTO 0);
+    SIGNAL hz1 : std_logic;
+
 BEGIN
 
-    -- debug
     -- cpu
-    /*
-    cpu : ENTITY work.light8080 PORT MAP (
-        rd => rd, wr => wr,
-        clk => cpuClock,
-        data_out => cpuDataOut,
-        data_in => cpuDataIn,
-        addr_out => cpuAddress,
-        io => iom,
-        intr => '0', --bez preruseni
-        reset => reset
-        );
-    --*/
     cpu1 : ENTITY work.t80s
-        GENERIC MAP(mode => 0, t2write => 1, iowait => 0)
+        GENERIC MAP(mode => 1, t2write => 1, iowait => 1)
         PORT MAP(
             reset_n => NOT reset,
             clk_n => NOT cpuClock,
-            wait_n => '1',
+            wait_n => NOT doWait, --dramDone,
             int_n => '1',
             nmi_n => '1',
             busrq_n => '1',
@@ -147,26 +147,22 @@ BEGIN
             iorq_n => n_IORQ,
             rd_n => n_RD,
             wr_n => n_WR,
+            rfsh_n => rfsh_n,
             a => cpuAddress,
             di => cpuDataIn,
             do => cpuDataOut);
+
     cpuClk : ENTITY work.aciaClock GENERIC MAP (50, 2) PORT MAP(clk, cpuClock);
     --cpuClock <= clk;
 
-    -- bus signals
-    /*
-    memrd <= rd AND NOT iom;
-    memwr <= wr AND NOT iom;
-    iord <= rd AND iom;
-    iowr <= wr AND iom;
-    --*/
+    -- dekodovani ridicich signalu
 
     ioWR <= n_WR NOR n_IORQ;
     memWR <= n_WR NOR n_MREQ;
     ioRD <= n_RD NOR n_IORQ;
     memRD <= n_RD NOR n_MREQ;
 
-    -- ROM
+    -- ROM                          
     rom : ENTITY work.rom4k PORT MAP (
         address => cpuAddress(11 DOWNTO 0),
         clock => clk,
@@ -174,36 +170,70 @@ BEGIN
         );
 
     -- RAM
-    ram : ENTITY work.ram4k PORT MAP (
-        address => cpuAddress(11 DOWNTO 0),
-        clock => clk,
-        data => cpuDataOut,
-        wren => ramwr,
-        q => ramDataOut
+
+    dram : ENTITY work.sdram PORT MAP(
+        clk => mhz133,
+        reset_n => NOT dramReset,
+        az_cs => ramcs,
+        az_rd_n => NOT memrd,
+        az_wr_n => NOT ramwr,
+        az_addr => "0000000" & cpuAddress(14 DOWNTO 0),
+        az_data => x"00" & cpuDataOut,
+        az_be_n => "00",
+        za_waitrequest => dramWait,
+        za_valid => dramDone,
+        --ready => dramReady,
+        --done => dramDone,
+        za_data => dramDataOut,
+
+        --fyzicke rozhrani
+        zs_cke => s_cke,
+        zs_cs_n => s_cs,
+        zs_ras_n => s_ras,
+        zs_cas_n => s_cas,
+        zs_we_n => s_we,
+        zs_ba => s_bs,
+        zs_addr => s_a,
+        zs_dq => s_dq,
+        zs_dqm(1) => s_udqm,
+        zs_dqm(0) => s_ldqm
         );
 
-    -- UART
-    /*
-    uart : ENTITY work.acia6850 PORT MAP (
-        clk => cpuClock,
-        rst => reset,
-        cs => uartcs,
-        addr => cpuAddress(0),
-        rw => uartwr,
-        data_in => cpuDataOut,
-        data_out => uartDataOut,
-        RxC => uartClock,
-        TxC => uartClock,
-        RxD => uart_RxD,
-        TxD => uart_TxD,
-        DCD_n => '0',
-        CTS_n => '0'
-        );
+    s_clk <= mhz133;
 
-    -- baud 
-    baud : ENTITY work.aciaClock GENERIC MAP (50_000_000, 5_000_000) PORT MAP(clk, uartClock);
-    --*/
+    mhz133 <= clk;
+    ramDataOut <= dramDataOut(7 DOWNTO 0); --15 to 1
+    --todo zpozdeni
+    reset <= dramReset; --zbytek systemu
+
+    -- SDRAM wait states
+    PROCESS (cpuClock)
+    BEGIN
+        IF rising_edge(cpuClock) THEN
+            IF ramcs = '1' THEN
+                doWait <= '1';
+            ELSE
+                doWait <= doWait;
+            END IF;
+            IF dramWait = '1' THEN
+                doWait <= '1';
+            ELSE
+                doWait <= doWait;
+            END IF;
+
+            IF dramDone = '1' THEN
+                doWait <= '0';
+            ELSE
+                doWait <= doWait;
+            END IF;
+        END IF;
+
+    END PROCESS;
+    -- UART / terminal
     io1 : ENTITY work.SBCTextDisplayRGB
+        GENERIC MAP(
+            EXTENDED_CHARSET => 1
+        )
         PORT MAP(
             n_reset => NOT reset,
             clk => clk,
@@ -233,7 +263,7 @@ BEGIN
         );
 
     -- dekodery
-    ramcs <= '1' WHEN cpuAddress(15 DOWNTO 12) = "1111" ELSE
+    ramcs <= '1' WHEN cpuAddress(15 DOWNTO 15) = "1" ELSE
         '0';
     romcs <= '1' WHEN cpuAddress(15 DOWNTO 12) = "0000" ELSE
         '0';
@@ -250,38 +280,37 @@ BEGIN
         uartDataOut WHEN (uartcs AND iord)
         ELSE
         x"00";
-    /*
-    PROCESS (clk)
-    BEGIN
-        IF rising_edge(clk) THEN
-            -- sbernice    
-            IF (romcs = '1' AND memrd = '1') THEN
-                cpuDataIn <= romDataOut;
-            ELSIF (ramcs = '1' AND memrd = '1') THEN
-                cpuDataIn <= ramDataOut;
-            ELSIF (uartcs = '1' AND iord = '1') THEN
-                cpuDataIn <= uartDataOut;
-            ELSE
-                cpuDataIn <= cpuDataIn;
-            END IF;
-
-        END IF;
-    END PROCESS;
-    --*/
 
     PROCESS (cpuClock)
         VARIABLE resetDuration : INTEGER := 5;
     BEGIN
         IF rising_edge(cpuClock) THEN
             IF resetDuration = 0 THEN
-                reset <= '0';
+                dramReset <= '0';
             ELSE
                 resetDuration := resetDuration - 1;
-                reset <= '1';
+                dramReset <= '1';
             END IF;
             IF reset_b = '0' THEN
                 resetDuration := 7;
             END IF;
         END IF;
     END PROCESS;
+
+    --testing
+    --leds
+    led1 <= NOT reset;
+    led2 <= NOT romcs;
+    led3 <= NOT ramcs;
+    led4 <= NOT uartcs;
+    div_khz : ENTITY work.aciaClock GENERIC MAP (50_000_000, 1_000) PORT MAP(clk, khz);
+    div_hz : ENTITY work.aciaClock GENERIC MAP (50_000_000, 3) PORT MAP(clk, hz1);
+    dis : ENTITY work.segmuxnum PORT MAP (khz, unsigned(dispLatch), segA, segB, segC, segD, segE, segF, segG, segH, dig1, dig2, dig3, dig4);
+    PROCESS (hz1) BEGIN
+        IF rising_edge(hz1) THEN
+            --dispLatch <= cpuAddress;
+            dispLatch <= cpuAddress(7 DOWNTO 0) & doWait & "000" & reset & dramDone & dramReady & dramReset;
+        END IF; --latch
+    END PROCESS;
+
 END main;
