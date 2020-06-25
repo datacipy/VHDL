@@ -1,0 +1,43 @@
+Quartus Prime Archive log --	D:/VHDL/kniha/omdazz-alpha/omdazz-alpha.qarlog
+
+Archive:	D:/VHDL/kniha/omdazz-alpha/omdazz-alpha.qar
+Date:		Thu Jun 25 08:37:34 2020
+Quartus Prime		19.1.0 Build 670 09/22/2019 Patches 0.02std SJ Lite Edition
+
+	=========== Files Selected: ===========
+D:/VHDL/kniha/3rd/GrantSearle/TERMINAL/CGABoldRom.cmp
+D:/VHDL/kniha/3rd/GrantSearle/TERMINAL/CGABoldRom.vhd
+D:/VHDL/kniha/3rd/GrantSearle/TERMINAL/CGABoldRomReduced.cmp
+D:/VHDL/kniha/3rd/GrantSearle/TERMINAL/CGABoldRomReduced.vhd
+D:/VHDL/kniha/3rd/GrantSearle/TERMINAL/CGAFontBold.HEX
+D:/VHDL/kniha/3rd/GrantSearle/TERMINAL/CGAFontBoldReduced.HEX
+D:/VHDL/kniha/3rd/GrantSearle/TERMINAL/DisplayRam1K.cmp
+D:/VHDL/kniha/3rd/GrantSearle/TERMINAL/DisplayRam1K.vhd
+D:/VHDL/kniha/3rd/GrantSearle/TERMINAL/DisplayRam2K.cmp
+D:/VHDL/kniha/3rd/GrantSearle/TERMINAL/DisplayRam2K.vhd
+D:/VHDL/kniha/3rd/GrantSearle/TERMINAL/SBCTextDisplayRGB.vhd
+D:/VHDL/kniha/3rd/GrantSearle/TERMINAL/Spf1.spf
+D:/VHDL/kniha/3rd/T80/T80.vhd
+D:/VHDL/kniha/3rd/T80/T80_ALU.vhd
+D:/VHDL/kniha/3rd/T80/T80_MCode.vhd
+D:/VHDL/kniha/3rd/T80/T80_Pack.vhd
+D:/VHDL/kniha/3rd/T80/T80_Reg.vhd
+D:/VHDL/kniha/3rd/T80/T80s.vhd
+D:/VHDL/kniha/acia6850/acia6850.vhd
+D:/VHDL/kniha/acia6850/aciaclock.vhd
+D:/VHDL/kniha/omdazz-alpha/alpha-mon4.hex
+D:/VHDL/kniha/omdazz-alpha/omdazz-alpha.qpf
+D:/VHDL/kniha/omdazz-alpha/omdazz-alpha.qsf
+D:/VHDL/kniha/omdazz-alpha/omdazz-alpha.vhd
+D:/VHDL/kniha/omdazz-alpha/omdazz-alpha_assignment_defaults.qdf
+D:/VHDL/kniha/omdazz-alpha/output_files/Spf1.spf
+D:/VHDL/kniha/omdazz-alpha/ram4k.cmp
+D:/VHDL/kniha/omdazz-alpha/ram4k.qip
+D:/VHDL/kniha/omdazz-alpha/ram4k.vhd
+D:/VHDL/kniha/omdazz-alpha/rom4k.cmp
+D:/VHDL/kniha/omdazz-alpha/rom4k.qip
+D:/VHDL/kniha/omdazz-alpha/rom4k.vhd
+	======= Total: 32 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
