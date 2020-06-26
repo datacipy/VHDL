@@ -155,7 +155,7 @@ BEGIN
             di => cpuDataIn,
             do => cpuDataOut);
 
-    cpuClk : ENTITY work.aciaClock GENERIC MAP (50, 2) PORT MAP(clk, cpuClock);
+    cpuClk : ENTITY work.aciaClock GENERIC MAP (500, 35) PORT MAP(clk, cpuClock);
     --cpuClock <= clk;
 
     -- dekodovani ridicich signalu
@@ -203,8 +203,8 @@ BEGIN
         );
 
     s_clk <= mhz133;
-
-    mhz133 <= clk;
+    ramclock : ENTITY work.pll PORT MAP (clk, mhz133);
+    --mhz133 <= clk;
     ramDataOut <= dramDataOut(7 DOWNTO 0); --15 to 1
 
     wdog : ENTITY work.propreset PORT MAP (cpuclock, reset_b, dramreset, reset);
