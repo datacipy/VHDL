@@ -1,0 +1,26 @@
+# system info sdram on 2020.06.26.12:47:25
+system_info:
+name,value
+DEVICE,EP4CE6E22C8
+DEVICE_FAMILY,Cyclone IV E
+GENERATION_ID,1593168421
+#
+#
+# Files generated for sdram on 2020.06.26.12:47:25
+files:
+filepath,kind,attributes,module,is_top
+simulation/sdram.vhd,VHDL,,sdram,true
+simulation/submodules/sdram_altpll_0.vho,VHDL,,sdram_altpll_0,false
+simulation/submodules/sdram_new_sdram_controller_0.vhd,VHDL,,sdram_new_sdram_controller_0,false
+simulation/submodules/sdram_new_sdram_controller_0_test_component.vhd,VHDL,,sdram_new_sdram_controller_0,false
+simulation/submodules/altera_reset_controller.v,VERILOG,,altera_reset_controller,false
+simulation/submodules/altera_reset_synchronizer.v,VERILOG,,altera_reset_controller,false
+simulation/submodules/altera_reset_controller.sdc,SDC,,altera_reset_controller,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+sdram.altpll_0,sdram_altpll_0
+sdram.new_sdram_controller_0,sdram_new_sdram_controller_0
+sdram.rst_controller,altera_reset_controller
+sdram.rst_controller_001,altera_reset_controller
