@@ -1,3 +1,9 @@
 [submodule "3rd/light8080"]
 	path = 3rd/light8080
 	url = https://github.com/jaruiz/light8080
+[submodule "3rd/spi-fpga"]
+	path = 3rd/spi-fpga
+	url = https://github.com/jakubcabal/spi-fpga.git
+[submodule "3rd/uart-for-fpga"]
+	path = 3rd/uart-for-fpga
+	url = https://github.com/jakubcabal/uart-for-fpga.git

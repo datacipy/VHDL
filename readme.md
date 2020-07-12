@@ -3,6 +3,8 @@
 
 Příklady ke knize a další konstrukce s doporučenými kity. Vše pod otevřenými licencemi MIT, pokud není uvedeno jinak (např. CC nebo GPL). Software třetí strany (adresář 3rd) může mít vlastní licenční podmínky.
 
+__Po klonování proveďte `git submodule update --init --recursive`, aby byly stažené i knihovny třetích stran.__
+
 Seznam příkladů
 ----------
 
@@ -66,6 +68,8 @@ Seznam příkladů
 
 Knihovny
 ----
+
+__Po klonování proveďte `git submodule update --init --recursive`, aby byly stažené i knihovny třetích stran.__
 
 - [3rd/light8080](./3rd/light8080) - VHDL procesor 8080
 - [3rd/T80](./3rd/T80) - VHDL procesor Z80
