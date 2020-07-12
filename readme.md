@@ -1,7 +1,7 @@
 [Data, čipy, procesory](https://datacipy.cz/)
 ==============================================
 
-Příklady ke knize a další konstrukce s doporučenými kity. Vše pod otevřenými licencemi MIT, pokud není uvedeno jinak (např. CC nebo GPL).
+Příklady ke knize a další konstrukce s doporučenými kity. Vše pod otevřenými licencemi MIT, pokud není uvedeno jinak (např. CC nebo GPL). Software třetí strany (adresář 3rd) může mít vlastní licenční podmínky.
 
 Seznam příkladů
 ----------
