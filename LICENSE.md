@@ -1,6 +1,10 @@
+__All code is licensed (unless otherwise specified) under the MIT License, enabling you to use it for anything you want for free.__
+
+---
+
 MIT License
 
-Copyright (c) 2020 Data, čipy, procesory
+Copyright (c) 2020 Martin Maly (maly@maly.cz)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
