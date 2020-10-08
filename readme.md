@@ -61,7 +61,11 @@ _kapitola 2.12_
 - klopné obvody D, D+R+S
 - registry 8bit, 16bit7
 
-#### [Hello-blink](./hello-blink)
+#### [Frequency divider](./frequency-divider)
+
+- generická dělička frekvence
+
+#### [Hello: blink](./hello-blink)
 
 - Blikání LEDkou (kompletní projekt pro Quartus)
 
@@ -86,6 +90,12 @@ _kapitola 14_
 _kapitola 2.9_
 
 - Rozdíl mezi resolved a unresolved signály
+
+#### [Seg7](./seg7)
+
+- Komponenta pro ovládání sedmisegmentového displeje:
+  - dekodér BCD-na-7seg
+  - multiplexor (pro buzení použít frekvence okolo 1 kHz)
 
 #### [Sirena](./sirena)
 
@@ -136,3 +146,8 @@ _kapitola 8.2_
 - [Alpha](./alpha) - OMEN Alpha ve VHDL pro EP2C5 (_kapitola 11_)
 - [OMDAZZ Alpha](./omdazz-alpha) - OMEN Alpha s procesorem Z80 a pamětí SDRAM pro kit OMDAZZ
 - [OMDAZZ Zeta](./omdazz-zeta) - OMEN Zeta s procesorem Z80, pamětí SDRAM a grafickým rozhraním pro kit OMDAZZ
+
+## Příklady
+
+- [OMDAZZ](./omdazz-priklady) - Příklady pro kit OMDAZZ (Cyclone IV)
+  - [Počítadlo BCD](./omdazz-priklady/BCD_counter) - jednoduché počítadlo (7segmentový displej LED, komponenty counter4BCD, 7seg, divider)
