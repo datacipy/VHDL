@@ -3,216 +3,108 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'CLK_50'
-Slack : -8.020
-TNS   : -254.531
-
-Type  : Slow 1200mV 85C Model Setup 'counter4BCD:cnt3|c'
-Slack : -0.558
-TNS   : -1.235
-
-Type  : Slow 1200mV 85C Model Setup 'counter4BCD:cnt2|c'
-Slack : -0.529
-TNS   : -1.602
+Slack : -7.747
+TNS   : -232.427
 
 Type  : Slow 1200mV 85C Model Setup 'freqdiv:divider4hz|clki'
-Slack : -0.386
-TNS   : -1.482
-
-Type  : Slow 1200mV 85C Model Setup 'counter4BCD:cnt1|c'
-Slack : -0.379
-TNS   : -1.386
+Slack : -1.636
+TNS   : -20.415
 
 Type  : Slow 1200mV 85C Model Setup 'freqdiv:divider|clki'
-Slack : -0.002
-TNS   : -0.002
+Slack : -0.003
+TNS   : -0.003
 
 Type  : Slow 1200mV 85C Model Hold 'freqdiv:divider|clki'
 Slack : 0.452
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'counter4BCD:cnt2|c'
-Slack : 0.453
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'counter4BCD:cnt3|c'
-Slack : 0.453
-TNS   : 0.000
-
 Type  : Slow 1200mV 85C Model Hold 'freqdiv:divider4hz|clki'
-Slack : 0.453
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'counter4BCD:cnt1|c'
-Slack : 0.454
+Slack : 0.465
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'CLK_50'
-Slack : 0.714
+Slack : 0.734
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK_50'
 Slack : -3.000
 TNS   : -98.168
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'counter4BCD:cnt1|c'
-Slack : -1.487
-TNS   : -7.435
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'counter4BCD:cnt2|c'
-Slack : -1.487
-TNS   : -7.435
-
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'freqdiv:divider4hz|clki'
 Slack : -1.487
-TNS   : -7.435
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'counter4BCD:cnt3|c'
-Slack : -1.487
-TNS   : -5.948
+TNS   : -23.792
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'freqdiv:divider|clki'
 Slack : -1.487
 TNS   : -2.974
 
 Type  : Slow 1200mV 0C Model Setup 'CLK_50'
-Slack : -7.320
-TNS   : -225.745
-
-Type  : Slow 1200mV 0C Model Setup 'counter4BCD:cnt3|c'
-Slack : -0.440
-TNS   : -0.849
-
-Type  : Slow 1200mV 0C Model Setup 'counter4BCD:cnt2|c'
-Slack : -0.387
-TNS   : -1.053
+Slack : -7.202
+TNS   : -206.259
 
 Type  : Slow 1200mV 0C Model Setup 'freqdiv:divider4hz|clki'
-Slack : -0.248
-TNS   : -0.940
-
-Type  : Slow 1200mV 0C Model Setup 'counter4BCD:cnt1|c'
-Slack : -0.243
-TNS   : -0.846
+Slack : -1.410
+TNS   : -17.216
 
 Type  : Slow 1200mV 0C Model Setup 'freqdiv:divider|clki'
-Slack : 0.092
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'counter4BCD:cnt2|c'
-Slack : 0.401
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'freqdiv:divider4hz|clki'
-Slack : 0.401
+Slack : 0.090
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'freqdiv:divider|clki'
-Slack : 0.401
+Slack : 0.400
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'counter4BCD:cnt1|c'
-Slack : 0.402
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'counter4BCD:cnt3|c'
-Slack : 0.402
+Type  : Slow 1200mV 0C Model Hold 'freqdiv:divider4hz|clki'
+Slack : 0.416
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'CLK_50'
-Slack : 0.664
+Slack : 0.682
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK_50'
 Slack : -3.000
 TNS   : -98.168
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'counter4BCD:cnt1|c'
-Slack : -1.487
-TNS   : -7.435
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'counter4BCD:cnt2|c'
-Slack : -1.487
-TNS   : -7.435
-
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'freqdiv:divider4hz|clki'
 Slack : -1.487
-TNS   : -7.435
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'counter4BCD:cnt3|c'
-Slack : -1.487
-TNS   : -6.160
+TNS   : -23.792
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'freqdiv:divider|clki'
 Slack : -1.487
 TNS   : -2.974
 
 Type  : Fast 1200mV 0C Model Setup 'CLK_50'
-Slack : -2.902
-TNS   : -77.707
-
-Type  : Fast 1200mV 0C Model Setup 'counter4BCD:cnt3|c'
-Slack : 0.308
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Setup 'counter4BCD:cnt2|c'
-Slack : 0.322
-TNS   : 0.000
+Slack : -2.788
+TNS   : -66.534
 
 Type  : Fast 1200mV 0C Model Setup 'freqdiv:divider4hz|clki'
-Slack : 0.388
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Setup 'counter4BCD:cnt1|c'
-Slack : 0.395
-TNS   : 0.000
+Slack : -0.144
+TNS   : -0.708
 
 Type  : Fast 1200mV 0C Model Setup 'freqdiv:divider|clki'
-Slack : 0.566
+Slack : 0.565
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'counter4BCD:cnt2|c'
-Slack : 0.186
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'counter4BCD:cnt3|c'
+Type  : Fast 1200mV 0C Model Hold 'freqdiv:divider|clki'
 Slack : 0.186
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'freqdiv:divider4hz|clki'
-Slack : 0.186
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'counter4BCD:cnt1|c'
-Slack : 0.187
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'freqdiv:divider|clki'
-Slack : 0.187
+Slack : 0.193
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'CLK_50'
-Slack : 0.284
+Slack : 0.290
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK_50'
 Slack : -3.000
-TNS   : -86.268
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'counter4BCD:cnt1|c'
-Slack : -1.000
-TNS   : -5.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'counter4BCD:cnt2|c'
-Slack : -1.000
-TNS   : -5.000
+TNS   : -86.160
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'freqdiv:divider4hz|clki'
 Slack : -1.000
-TNS   : -5.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'counter4BCD:cnt3|c'
-Slack : -1.000
-TNS   : -4.000
+TNS   : -16.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'freqdiv:divider|clki'
 Slack : -1.000
