@@ -151,3 +151,4 @@ _kapitola 8.2_
 
 - [OMDAZZ](./omdazz-priklady) - Příklady pro kit OMDAZZ (Cyclone IV)
   - [Počítadlo BCD](./omdazz-priklady/BCD_counter) - jednoduché počítadlo (7segmentový displej LED, komponenty counter4BCD, 7seg, divider)
+  - [Počítadlo stisknutí tlačítka](./omdazz-priklady/BCD_counter_button) - rozšíření příkladu výše. Ukazuje zapojení tlačítka a rozdíl mezi ošetřenými a neošetřenými zákmity

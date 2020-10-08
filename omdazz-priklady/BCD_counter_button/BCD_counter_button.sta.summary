@@ -1,0 +1,113 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'CLK_50'
+Slack : -7.272
+TNS   : -102.991
+
+Type  : Slow 1200mV 85C Model Setup 'freqdiv:divider|clki'
+Slack : -2.208
+TNS   : -7.939
+
+Type  : Slow 1200mV 85C Model Setup 'debouncer:debounce|q'
+Slack : -0.368
+TNS   : -0.998
+
+Type  : Slow 1200mV 85C Model Hold 'freqdiv:divider|clki'
+Slack : 0.444
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'debouncer:debounce|q'
+Slack : 0.452
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLK_50'
+Slack : 0.733
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK_50'
+Slack : -3.000
+TNS   : -52.071
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'freqdiv:divider|clki'
+Slack : -1.487
+TNS   : -13.383
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'debouncer:debounce|q'
+Slack : -1.487
+TNS   : -5.948
+
+Type  : Slow 1200mV 0C Model Setup 'CLK_50'
+Slack : -6.690
+TNS   : -90.291
+
+Type  : Slow 1200mV 0C Model Setup 'freqdiv:divider|clki'
+Slack : -2.007
+TNS   : -6.843
+
+Type  : Slow 1200mV 0C Model Setup 'debouncer:debounce|q'
+Slack : -0.230
+TNS   : -0.593
+
+Type  : Slow 1200mV 0C Model Hold 'freqdiv:divider|clki'
+Slack : 0.397
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'debouncer:debounce|q'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLK_50'
+Slack : 0.681
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK_50'
+Slack : -3.000
+TNS   : -52.071
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'freqdiv:divider|clki'
+Slack : -1.487
+TNS   : -13.383
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'debouncer:debounce|q'
+Slack : -1.487
+TNS   : -5.948
+
+Type  : Fast 1200mV 0C Model Setup 'CLK_50'
+Slack : -2.501
+TNS   : -27.799
+
+Type  : Fast 1200mV 0C Model Setup 'freqdiv:divider|clki'
+Slack : -0.449
+TNS   : -0.449
+
+Type  : Fast 1200mV 0C Model Setup 'debouncer:debounce|q'
+Slack : 0.400
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'freqdiv:divider|clki'
+Slack : 0.185
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'debouncer:debounce|q'
+Slack : 0.186
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLK_50'
+Slack : 0.290
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK_50'
+Slack : -3.000
+TNS   : -45.754
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'freqdiv:divider|clki'
+Slack : -1.000
+TNS   : -9.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'debouncer:debounce|q'
+Slack : -1.000
+TNS   : -4.000
+
+------------------------------------------------------------
