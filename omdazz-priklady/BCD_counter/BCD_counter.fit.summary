@@ -1,0 +1,16 @@
+Fitter Status : Successful - Thu Oct 08 19:38:07 2020
+Quartus Prime Version : 19.1.0 Build 670 09/22/2019 Patches 0.02std SJ Lite Edition
+Revision Name : BCD_counter
+Top-level Entity Name : BCD_counter16
+Family : Cyclone IV E
+Device : EP4CE6E22C8
+Timing Models : Final
+Total logic elements : 147 / 6,272 ( 2 % )
+    Total combinational functions : 146 / 6,272 ( 2 % )
+    Dedicated logic registers : 85 / 6,272 ( 1 % )
+Total registers : 85
+Total pins : 17 / 92 ( 18 % )
+Total virtual pins : 0
+Total memory bits : 0 / 276,480 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )
