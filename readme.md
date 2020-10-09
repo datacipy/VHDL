@@ -10,7 +10,7 @@ Příklady ke knize a další konstrukce s doporučenými kity. Vše pod otevře
 - [GTKWave]()
   (Pro MacOS využijte [tento návod](https://ughe.github.io/2018/11/06/gtkwave-osx) na spouštění gtkwave z příkazové řádky.)
 
-## Seznam příkladů
+## Komponenty abecedně
 
 #### [Adder](./adder)
 
@@ -134,6 +134,105 @@ _kapitola 8.2_
 #### [Utility](./utility)
 
 - Užitečné funkce pro VHDL
+
+## Komponenty podle kapitol
+
+#### kapitola 2.4 a další
+
+[Adder](./adder)
+
+- sčítačka
+- 4bitová sčítačka
+- 16b sčítačka
+- full adder
+
+####kapitola 2.7
+[Alpha-decoder](./alpha-decoder)
+
+- jednoduchý kombinační obvod
+
+#### kapitola 2.9
+
+[Resolved](./resolved)
+
+- Rozdíl mezi resolved a unresolved signály
+
+#### kapitola 2.12
+
+[FF](./ff)
+
+- klopné obvody D, D+R+S
+- registry 8bit, 16bit7
+
+#### kapitola 4.1
+
+[Analog](./analog)
+
+- PWM převodník
+- Sigma-delta převodník
+
+#### kapitola 4.2
+
+[Siréna](./sirena)
+
+- Generujeme zvuk
+
+#### kapitola 6.1
+
+[Counter](./counter)
+
+- Čítač 4bit
+- Čítač 16bit
+- Desítkový čítač 4bit (BCD)
+
+#### kapitola 7.2
+
+[UART Tx](./uart-tx)
+
+- Sériový vysílač (UART)
+
+#### kapitola 8.2
+
+[UART Rx](./uart-rx)
+
+- Sériový přijímač (UART)
+
+#### kapitola 13.5
+
+[Debouncer](./debouncer)
+
+- odstraňovač zákmitů
+
+#### kapitola 13.6
+
+[SPI](./spi)
+
+- SPI master
+
+#### kapitola 13.7
+
+[I2C_m](./i2c_m)
+[I2C_s](./i2c_s)
+
+- Master a slave pro I2C
+
+#### kapitola 14
+
+[MHRD](./MHRD)
+
+- Implementace mikroprocesoru MHRD
+
+#### kapitola 14.2
+
+[Barrel](./barrel)
+
+- Rychlý shifter (16bit) až o 16 pozic
+
+#### kapitola 14.2
+
+[ALU](./alu)
+
+- aritmeticko-logická jednotka (16bit)
 
 ## Knihovny
 
