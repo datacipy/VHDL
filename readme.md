@@ -7,7 +7,8 @@ Příklady ke knize a další konstrukce s doporučenými kity. Vše pod otevře
 ## Doporučené nástroje
 
 - [GHDL](https://github.com/ghdl/ghdl)
-- [GTKWave]
+- [GTKWave]()
+  (Pro MacOS využijte [tento návod](https://ughe.github.io/2018/11/06/gtkwave-osx) na spouštění gtkwave z příkazové řádky.)
 
 ## Seznam příkladů
 
