@@ -4,6 +4,11 @@ Příklady ke knize a další konstrukce s doporučenými kity. Vše pod otevře
 
 **Po klonování proveďte `git submodule update --init --recursive`, aby byly stažené i knihovny třetích stran.**
 
+## Doporučené nástroje
+
+- [GHDL](https://github.com/ghdl/ghdl)
+- [GTKWave]
+
 ## Seznam příkladů
 
 #### [Adder](./adder)
