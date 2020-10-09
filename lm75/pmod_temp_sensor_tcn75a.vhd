@@ -3,6 +3,7 @@
 --   FileName:         pmod_temp_sensor_tcn75a.vhd
 --   Dependencies:     i2c_master.vhd (Version 2.2)
 --   Design Software:  Quartus Prime Version 17.0.0 Build 595 SJ Lite Edition
+--   See: https://www.digikey.com/eewiki/pages/viewpage.action?pageId=86278365
 --
 --   HDL CODE IS PROVIDED "AS IS."  DIGI-KEY EXPRESSLY DISCLAIMS ANY
 --   WARRANTY OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING BUT NOT
