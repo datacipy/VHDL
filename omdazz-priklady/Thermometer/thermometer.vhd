@@ -31,6 +31,7 @@ ARCHITECTURE rtl OF thermometer IS
 
 	SIGNAL out16b : std_logic_vector(15 DOWNTO 0) := x"0000";
 	SIGNAL clk_1k : std_logic;
+	signal temp:std_logic_vector(8 downto 0);
 
 BEGIN
 
@@ -57,9 +58,16 @@ BEGIN
 	reset_n=>'1', 
 	scl=>LM75_I2C_SCL,
 	sda=>LM75_I2C_SDA,
-	--temperature=>out16b(8 downto 0)
-	temperature=>out16b(11 downto 3)
+	temperature=> temp
 	);
+
+	-- Binarni verze
+	
+	out16b(11 downto 3) <= temp
+	
+	-- BCD verze (zakomentovat predchozi prirazeni a odkomentovat nasledujici radek)
+	-- bcdconv: entity work.bcd port map (temp(8 downto 1),out16b(9 downto 0));
+	
 	
 
 END ARCHITECTURE;
