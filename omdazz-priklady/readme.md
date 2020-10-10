@@ -4,4 +4,4 @@
 - [Počítadlo stisknutí tlačítka s výstupem na displej LED](./BCD_counter_button)
 - [Stopky]() _Připravuji_
 - [Hodiny]() _Připravuji_
-- [Čtení teploty]() _Připravuji_
+- [Čtení teploty](./Thermometer) _Připravuji_

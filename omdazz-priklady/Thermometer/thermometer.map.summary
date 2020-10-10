@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sat Oct 10 14:14:30 2020
+Quartus Prime Version : 19.1.0 Build 670 09/22/2019 Patches 0.02std SJ Lite Edition
+Revision Name : thermometer
+Top-level Entity Name : thermometer
+Family : Cyclone IV E
+Total logic elements : 243
+    Total combinational functions : 215
+    Dedicated logic registers : 131
+Total registers : 131
+Total pins : 15
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
