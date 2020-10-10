@@ -46,6 +46,10 @@ _kapitola 14.2_
 
 - Rychlý shifter (16bit) až o 16 pozic
 
+#### [BCD](./bcd)
+
+- Převodník 8bitových binárních čísel na desítkovou BCD reprezentaci (10 bitů)
+
 #### [Counter](./counter)
 
 _kapitola 6.1_
