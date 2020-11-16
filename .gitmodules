@@ -1,6 +1,6 @@
 [submodule "3rd/light8080"]
 	path = 3rd/light8080
-	url = https://github.com/jaruiz/light8080
+	url = https://github.com/datacipy/light8080
 [submodule "3rd/spi-fpga"]
 	path = 3rd/spi-fpga
 	url = https://github.com/jakubcabal/spi-fpga.git
